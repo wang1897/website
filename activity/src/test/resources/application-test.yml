@@ -1,0 +1,62 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://47.100.54.21:3306/qbao_schema?useUnicode=true&characterEncoding=UTF-8
+    username: test_admin
+    password: 5a6b1bf209de5d0197ea4e507c8c
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+  redis:
+    host: 47.100.54.21
+    port: 6379
+    # REDIS (RedisProperties)
+    # Redis数据库索引（默认为0）
+    database: 0
+    # Redis服务器连接密码（默认为空）
+    password: p@QX&#hge11SZqEW
+    # 连接池最大连接数（使用负值表示没有限制）
+    # 连接超时时间（毫秒）
+    timeout: 10000
+    pool:
+      max-active: 20
+      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-wait: -1
+      # 连接池中的最大空闲连接
+      max-idle: 20
+      # 连接池中的最小空闲连接
+      min-idle: 0
+
+rongCloud:
+  appKey: 82hegw5u8degx
+  appSecret: 2BcQpXsSGvv
+
+upload:
+  headerPath: /usr/local/projects/qbao_api/upload/images/headers
+  iconPath: /usr/local/projects/qbao_api/upload/images/icon
+  pkgPath: /usr/local/projects/qbao_api/upload/images/pkg
+  IDCardPath: /usr/local/projects/qbao_api/upload/images/IDCard
+  ticketPath: /usr/local/projects/qbao_api/upload/images/ticketPath
+  eventBannerPath: /usr/local/projects/qbao_api/upload/images/event
+
+http:
+  header:
+    allowedOrigin: '*'
+    allowedMethod: '*'
+    allowedHeader: X-Requested-With,Content-Type,Authorization,X-T,X-AD,X-TS,X-S,X-NO-ENC-XXX,X-R
+
+activate:
+  validationUrl: http://47.100.54.21/qbao_home2/Activate_account.html?account=
+  pwdUrl: http://47.100.54.21/qbao_home2/getpassword_sendmail.html?account=
+  fundUserValidationUrl: http://47.100.54.21/qbao_fund/#/home?activate=true&id=
+  fundUserPwdUrl: http://47.100.54.21/qbao_fund/#/home?resetPass=true&id=
+  title: qbao
+  qbaoFundUrl: http://47.100.54.21/qbao_fund/#/
+
+schedule:
+  enabled: true
+  scheduledBatchCron: 0 0/1 * * * ?
+  adhocBatchCron: 0 0/2 * * * ?
+  withdrawBatchCron: 0 0/1 * * * ?

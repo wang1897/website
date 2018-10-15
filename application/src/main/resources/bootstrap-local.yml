@@ -1,0 +1,5 @@
+spring:
+  cloud:
+    config:
+      uri: http://43.254.148.147:4021
+      profile: local

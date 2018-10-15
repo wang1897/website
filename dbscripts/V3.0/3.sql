@@ -1,0 +1,3 @@
+INSERT INTO `qbao_schema`.`sys_config` (`name`,`value`,`create_time`,`update_time`) VALUES ('QBAO_PAY_LIMIT_DAY','5000000','2018-04-16 17:53:17','2018-04-16 17:53:17');
+INSERT INTO `qbao_schema`.`sys_config` (`name`,`value`,`create_time`,`update_time`) VALUES ('QBAO_PAY_LIMIT_PER','999999.99','2018-04-16 17:53:17','2018-04-16 18:11:18');
+INSERT INTO `qbao_schema`.`batch_definition` (`name`,`frequency`,`start_time`,`is_active`,`class_name`,`create_time`,`time_slot`,`expire_time`,`update_time`) VALUES ('OrderCancelBatch',5,'2018-04-01 00:00:00',1,'com.aethercoder.core.dao.batch.OrderCancelBatch','2018-04-01 00:00:00',1,'2018-04-01 00:00:00','2018-04-01 00:00:00');

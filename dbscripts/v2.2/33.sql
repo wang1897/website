@@ -1,0 +1,1 @@
+update qbao_schema.wallet_account set account_name = 'Qbao Network' where account_no='1002';

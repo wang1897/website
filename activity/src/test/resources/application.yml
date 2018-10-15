@@ -1,0 +1,50 @@
+
+spring:
+  http:
+    multipart:
+      max-file-size: 50Mb
+      max-request-size: 50Mb
+  messages:
+    basename: i18n/messages
+  #针对多种环境配置
+  profiles:
+    active: local
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  jackson:
+    serialization:
+      indent_output: false
+  mail:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: false
+
+jwt:
+  secret: qbao_mySecret-123890
+
+mail:
+  host: smtp.mxhichina.com
+  username: bd@aethercoder.com
+  password: Hero36hero36
+  port: 465
+  encode: UTF-8
+
+fund_mail:
+  host: smtp.exmail.qq.com
+  username: info@qbao.fund
+  password: M@y1keji@1115
+  port: 465
+  encode: UTF-8
+
+qtum:
+  httpUrl: http://106.14.200.176:8080
+  url: http://139.196.73.39:3889
+  username: admin
+  password: admin
